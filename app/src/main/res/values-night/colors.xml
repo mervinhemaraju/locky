@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+
+<!-- =================== -->
+    <!-- Default App Colors -->
+    <!-- =================== -->
+    <color name="colorPrimary">@color/dark_colorAccent</color>
+    <color name="colorPrimaryDark">@color/dark_colorPrimaryDark</color>
+    <color name="colorAccent">@color/dark_colorAccent</color>
+    <color name="colorOnSurface">@color/dark_colorOnSurface</color>
+    <color name="colorShadowColor">@color/colorAccent</color>
+    <color name="dark_colorOnSecondary">@color/grey_dark_100</color>
+    <color name="colorOnSurfaceSnackBar">@android:color/white</color>
+
+    <!-- ============= -->
+    <!-- Button Colors -->
+    <!-- ============= -->
+    <color name="colorFabNormal">@color/dark_colorOnSecondary</color>
+    <color name="colorFabMini">@color/dark_colorOnSecondary</color>
+
+    <color name="colorSnackBarButton">@color/colorAccentDark</color>
+
+    <!-- ================= -->
+    <!-- Text Field Colors -->
+    <!-- ================= -->
+    <color name="colorTextFieldAccentSearch">@color/colorAccent</color>
+    <color name="colorTextFieldTextDefault">@color/colorAccent</color>
+
+    <!-- =================== -->
+    <!-- Iconography Colors -->
+    <!-- =================== -->
+    <color name="colorIcon">@color/grey_100</color>
+    <color name="colorIconSurface">@android:color/white</color>
+    <color name="colorIconFabMini">@android:color/white</color>
+    <color name="colorIconFabNormal">@color/colorAccent</color>
+
+    <color name="colorIconMenuBottomSheet">@color/grey_200</color>
+
+    <!-- ===================== -->
+    <!-- Material Cards Colors -->
+    <!-- ===================== -->
+    <color name="colorCardBackground">@color/dark_colorOnSecondary</color>
+
+    <!-- ================= -->
+    <!-- Typography Colors -->
+    <!-- ================= -->
+    <color name="colorTextTitleToolbar">@color/colorAccent</color>
+    <color name="colorTextTitle">@color/grey_50</color>
+    <color name="colorTextSubtitle">@color/grey_200</color>
+    <color name="colorTextBody">@color/grey_200</color>
+    <color name="colorTextMenu">@color/grey_200</color>
+    <color name="colorButtonTextAccentDark">@color/colorAccent</color>
+
+    <color name="colorTextTitleMessage">@color/dark_colorOnSecondary</color>
+
+    <color name="colorTextMenuBottomSheet">@color/grey_200</color>
+
+    <color name="colorTextSnackBar">@color/dark_colorOnSecondary</color>
+
+    <color name="colorTextPopup">@color/grey_50</color>
+
+    <!-- ================== -->
+    <!-- Information Colors -->
+    <!-- ================== -->
+    <color name="colorInfoWarning_Light">@color/yellow_50_alpha</color>
+    <color name="colorInfoError_Light">@color/red_50</color>
+</resources>

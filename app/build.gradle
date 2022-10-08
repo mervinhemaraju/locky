@@ -1,0 +1,152 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs"
+apply plugin: 'com.google.android.gms.oss-licenses-plugin'
+
+android {
+    signingConfigs {
+        release
+    }
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId rootProject.ext.applicationId
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            // Enables code shrinking, obfuscation, and optimization for only
+            // your project's release build type.
+            minifyEnabled true
+
+            // Enables resource shrinking, which is performed by the
+            // Android Gradle plugin.
+            shrinkResources true
+
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+    compileOptions {
+        targetCompatibility = 1.8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+def props = new Properties()
+def propFile = new File("keystore.properties")
+if (propFile.canRead()){
+    props.load(new FileInputStream(propFile))
+
+    if (props!=null && props.containsKey('STORE_FILE') && props.containsKey('STORE_PASSWORD') &&
+            props.containsKey('KEY_ALIAS') && props.containsKey('KEY_PASSWORD')) {
+        android.signingConfigs.release.storeFile = file(props['STORE_FILE'])
+        android.signingConfigs.release.storePassword = props['STORE_PASSWORD']
+        android.signingConfigs.release.keyAlias = props['KEY_ALIAS']
+        android.signingConfigs.release.keyPassword = props['KEY_PASSWORD']
+    } else {
+        println 'signing.properties found but some entries are missing'
+        android.buildTypes.release.signingConfig = null
+    }
+}else {
+    println 'signing.properties not found'
+    android.buildTypes.release.signingConfig = null
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    /*****************************************\
+    /********** Kotlin Dependencies **********\
+    /******************************************/
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$version_kotlin"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version_kotlin_coroutines"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version_kotlin_coroutines"
+
+
+    /*******************************************\
+    /********** Android Dependencies ***********\
+    /*******************************************/
+    // Core & Material Design
+    implementation "com.google.android.material:material:$version_material_design"
+    implementation "androidx.core:core-ktx:$version_ktx_core"
+    implementation "androidx.constraintlayout:constraintlayout:$version_constraint_layout"
+    implementation "androidx.preference:preference:$version_preference"
+    implementation "com.google.android.gms:play-services-oss-licenses:$version_oss_licenses"
+    implementation "com.google.android.gms:play-services-auth:$version_gms_services"
+    implementation "androidx.biometric:biometric:$version_biometric"
+    implementation "com.android.billingclient:billing:$version_play_billing"
+    implementation "com.android.billingclient:billing-ktx:$version_play_billing"
+
+    // JetPack Navigation & Lifecycle Architecture
+    implementation "androidx.lifecycle:lifecycle-extensions:$version_lifecycle"
+    implementation "androidx.navigation:navigation-fragment-ktx:$version_navigation"
+    implementation "androidx.navigation:navigation-ui-ktx:$version_navigation"
+
+    // JetPack Room
+    implementation "androidx.room:room-runtime:$version_room"
+    kapt "androidx.room:room-compiler:$version_room"
+    implementation "androidx.room:room-ktx:$version_room"
+    implementation "androidx.room:room-rxjava2:$version_room"
+
+    // Jetpack Security
+    implementation "androidx.security:security-crypto:$version_security"
+
+    // JetPack Paging
+    implementation "androidx.paging:paging-runtime-ktx:$version_paging"
+
+    /********************************************\
+    /********** 3rd Party Dependencies **********\
+    /********************************************/
+    implementation "com.github.bumptech.glide:glide:$version_glide"
+    implementation "com.squareup.retrofit2:retrofit:$version_retrofit"
+    implementation "com.squareup.retrofit2:converter-moshi:$version_retrofit"
+    implementation "com.squareup.moshi:moshi:$version_moshi"
+    implementation "com.squareup.moshi:moshi-kotlin:$version_moshi"
+    implementation "com.google.code.gson:gson:$version_gson"
+    implementation "com.airbnb.android:lottie:$version_lottie"
+    implementation "com.shobhitpuri.custombuttons:google-signin:$version_googlebutton"
+
+
+    /******************************************\
+    /********** Testing Dependencies **********\
+    /******************************************/
+    // JUnit Test Suite
+    testImplementation "org.junit.jupiter:junit-jupiter:$version_junit"
+
+    // Android Core & JUnit
+    androidTestImplementation "androidx.test.ext:junit:$version_junit_ext"
+    debugImplementation "androidx.test:core:$version_test_core"
+    androidTestImplementation "androidx.arch.core:core-testing:$version_arch_core"
+    androidTestImplementation "androidx.test:runner:$version_test_rule"
+    androidTestImplementation "androidx.test:rules:$version_test_runner"
+    debugImplementation "androidx.fragment:fragment-testing:$version_fragment"
+
+    // Espresso Suite
+    androidTestImplementation "androidx.test.espresso:espresso-core:$version_espresso"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$version_espresso"
+
+    // JetPack Navigation Suite
+    androidTestImplementation "androidx.navigation:navigation-testing:$version_navigation"
+
+    // JetPack Room Suite
+    androidTestImplementation "androidx.room:room-testing:$version_room"
+
+    //Third Party Testing
+    debugImplementation "com.amitshekhar.android:debug-db:$version_amitshekar_debug"
+}
+

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/Drawer_Main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+
+        <!--
+        ****************************************
+        **** This is the main coordinator layout
+        ****************************************
+        -->
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/Layout_Coordinator_Main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <!--
+            ********************************************************
+            **** This is the app bar layout which contains the
+            **** main Material Toolbar.
+            ********************************************************
+            -->
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/Layout_AppBar_Main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:outlineAmbientShadowColor="@color/colorShadowColor"
+                android:outlineSpotShadowColor="@color/colorShadowColor"
+                app:liftOnScroll="true"
+                tools:targetApi="p">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/Toolbar_Main"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/colorOnSurface"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp">
+
+                    <TextView
+                        android:id="@+id/Toolbar_Main_Title"
+                        style="@style/Locky.Text.Title6.Toolbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/app_name" />
+
+                    <LinearLayout
+                        android:id="@+id/Toolbar_Search_Layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:visibility="gone">
+
+                        <EditText
+                            android:id="@+id/Toolbar_Search_Box"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="@string/field_hint_item_search"
+                            android:imeOptions="flagNoExtractUi|actionSearch"
+                            android:importantForAutofill="no"
+                            android:inputType="textNoSuggestions" />
+
+                        <ImageButton
+                            android:id="@+id/Toolbar_Search_Close"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/actionBarItemBackground"
+                            app:srcCompat="@drawable/ic_close" />
+                    </LinearLayout>
+
+                </com.google.android.material.appbar.MaterialToolbar>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+            <!--
+            *****************************************************
+            **** This is the main content fragment container ****
+            *****************************************************
+            -->
+            <include layout="@layout/include_content_container_main" />
+
+
+            <!--
+            ********************************************************
+            **** These are the two Floating Action Buttons which
+            **** appears on the main screen screen.
+            ********************************************************
+            -->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/FAB_Search"
+                style="@style/Locky.FloatingActionButton.Mini"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:layout_marginBottom="85dp"
+                app:layout_anchor="@id/FAB_Add"
+                app:layout_anchorGravity="top|center_horizontal"
+                app:srcCompat="@drawable/ic_search" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/FAB_Add"
+                style="@style/Locky.FloatingActionButton.Normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/fab_margin"
+                app:srcCompat="@drawable/ic_add" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+        <!--
+         ****************************************************
+         **** This is the Navigation View for the Drawer ****
+         ****************************************************
+         -->
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/Navigation_View"
+            style="@style/Locky.Widget.Custom.NavigationView.Drawer"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:clipToPadding="false"
+            android:fitsSystemWindows="true"
+            android:paddingStart="0dp"
+            android:paddingEnd="16dp"
+            app:headerLayout="@layout/drawer_header"
+            app:itemTextAppearance="@style/Locky.Text.Body.Drawer"
+            app:menu="@menu/menu_drawer_main" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</layout>

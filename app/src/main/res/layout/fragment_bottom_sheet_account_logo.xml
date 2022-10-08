@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="ViewModel"
+            type="com.th3pl4gu3.locky_offline.ui.main.add.account.LogoBottomSheetViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <EditText
+            android:id="@+id/Textfield_Search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/field_hint_logo_search"
+            android:inputType="textWebEmailAddress"
+            android:imeOptions="actionSearch"
+            app:layout_constraintEnd_toStartOf="@id/Button_Cancel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.7"
+            style="@style/Locky.TextBox.Default.Search" />
+
+        <Button
+            android:id="@+id/Button_Cancel"
+            style="@style/Locky.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/button_action_cancel"
+            app:layout_constraintBottom_toBottomOf="@+id/Textfield_Search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Textfield_Search"
+            app:layout_constraintTop_toTopOf="@+id/Textfield_Search"
+            app:layout_constraintWidth_percent="0.3" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerView_Logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:visibility="@{ViewModel.emptyViewVisibility ? View.GONE : View.VISIBLE}"
+            app:layout_constraintEnd_toEndOf="@+id/Button_Cancel"
+            app:layout_constraintStart_toStartOf="@+id/Textfield_Search"
+            app:layout_constraintTop_toBottomOf="@+id/Textfield_Search" />
+
+        <!-- Empty View -->
+        <LinearLayout
+            android:id="@+id/Empty_View"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="100dp"
+            android:orientation="vertical"
+            android:visibility="@{ViewModel.emptyViewVisibility ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Textfield_Search">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/il_search" />
+
+            <TextView
+                style="@style/Locky.Text.Title6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:text="@{ViewModel.logoTitle}" />
+
+            <TextView
+                style="@style/Locky.Text.Subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:text="@string/text_subtitle_emptyView_logo_search" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

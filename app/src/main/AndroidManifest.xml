@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.th3pl4gu3.locky_offline">
+
+    <!-- For basic package querying, ie browsers, email... -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+    <!-- For fingerprint authentication to log into the app if enabled -->
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <!-- For internet connection such as Google OAuth, etc... -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- For Google Play Billing -->
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <!-- Application -->
+    <application
+        android:name=".ui.main.LockyApplication"
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/xml_backup_descriptor"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Locky.Theme">
+        <activity
+            android:name=".ui.main.LockyActivity"
+            android:theme="@style/Locky.Theme.Launcher"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

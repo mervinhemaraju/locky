@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.th3pl4gu3.locky_offline.BuildConfig" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/Layout_Fragment_About"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorOnSurface"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/include_about_locky"
+                layout="@layout/include_about_locky" />
+
+            <include
+                android:id="@+id/include_about_development"
+                layout="@layout/include_about_development" />
+
+            <include
+                android:id="@+id/include_about_other"
+                layout="@layout/include_about_other" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

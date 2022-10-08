@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="Logo"
+            type="com.th3pl4gu3.locky_offline.repository.network.WebsiteLogo" />
+
+        <variable
+            name="ClickListener"
+            type="com.th3pl4gu3.locky_offline.ui.main.add.account.ClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> ClickListener.onClick(Logo.logoUrl)}"
+        android:padding="16dp">
+
+
+        <ImageView
+            android:id="@+id/Website_Logo"
+            errorResource="@{@drawable/ic_logo_notfound}"
+            imageUrl="@{Logo.logoUrl}"
+            loadingResource="@{@drawable/ic_image_loading}"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/Barrier_Logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_logo_notfound" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/Barrier_Logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="Website_Logo"
+            tools:layout_editor_absoluteX="377dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:id="@+id/Website_Name"
+            style="@style/Locky.Text.Title6.List"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@{Logo.name}"
+            app:layout_constraintBottom_toBottomOf="@+id/Website_Logo"
+            app:layout_constraintEnd_toStartOf="@id/Guideline_Title"
+            app:layout_constraintStart_toEndOf="@id/Barrier_Logo"
+            app:layout_constraintTop_toTopOf="@+id/Website_Logo"
+            tools:text="This can ba a very very very very long long title" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/Guideline_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".95" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

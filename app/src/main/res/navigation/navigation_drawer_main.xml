@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_drawer_main"
+    app:startDestination="@id/Fragment_Starter">
+
+    <!-- ========================= -->
+    <!-- ====== Entry Point ====== -->
+    <!-- ========================= -->
+    <fragment
+        android:id="@+id/Fragment_Starter"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.starter.StarterFragment"
+        android:label=""
+        tools:layout="@layout/fragment_starter">
+        <action
+            android:id="@+id/action_Fragment_Starter_to_Fragment_Account"
+            app:destination="@id/Fragment_Account"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right"
+            app:popUpTo="@id/navigation_drawer_main"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_Fragment_Starter_to_Fragment_Bottom_Dialog_Password_Auth"
+            app:destination="@id/Fragment_Bottom_Dialog_Password_Auth" />
+    </fragment>
+
+    <!-- ============================ -->
+    <!-- ====== Global Actions ====== -->
+    <!-- ============================ -->
+    <action
+        android:id="@+id/action_global_Fragment_Add_Account"
+        app:destination="@id/Fragment_Add_Account"
+        app:enterAnim="@anim/anim_slide_in_right"
+        app:exitAnim="@anim/anim_slide_out_left"
+        app:popEnterAnim="@anim/anim_slide_in_left"
+        app:popExitAnim="@anim/anim_slide_out_right" />
+
+    <action
+        android:id="@+id/action_global_Fragment_Add_BankAccount"
+        app:destination="@id/Fragment_Add_BankAccount"
+        app:enterAnim="@anim/anim_slide_in_right"
+        app:exitAnim="@anim/anim_slide_out_left"
+        app:popEnterAnim="@anim/anim_slide_in_left"
+        app:popExitAnim="@anim/anim_slide_out_right" />
+
+    <action
+        android:id="@+id/action_global_Fragment_Add_Card"
+        app:destination="@id/Fragment_Add_Card"
+        app:enterAnim="@anim/anim_slide_in_right"
+        app:exitAnim="@anim/anim_slide_out_left"
+        app:popEnterAnim="@anim/anim_slide_in_left"
+        app:popExitAnim="@anim/anim_slide_out_right" />
+
+    <action
+        android:id="@+id/action_global_Fragment_Add_Device"
+        app:destination="@id/Fragment_Add_Device"
+        app:enterAnim="@anim/anim_slide_in_right"
+        app:exitAnim="@anim/anim_slide_out_left"
+        app:popEnterAnim="@anim/anim_slide_in_left"
+        app:popExitAnim="@anim/anim_slide_out_right" />
+
+    <action
+        android:id="@+id/action_global_Fragment_Search"
+        app:destination="@id/Fragment_Search" />
+
+    <action
+        android:id="@+id/action_global_Fragment_Bottom_Dialog_More_Options"
+        app:destination="@id/Fragment_Bottom_Dialog_More_Options" />
+
+
+    <!-- ================================== -->
+    <!-- ====== Main Locky Fragments ====== -->
+    <!-- ================================== -->
+    <fragment
+        android:id="@+id/Fragment_Account"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.main.account.AccountFragment"
+        android:label="@string/locky_section_main_account"
+        tools:layout="@layout/fragment_account">
+        <action
+            android:id="@+id/action_Fragment_Account_to_Fragment_View_Account"
+            app:destination="@id/Fragment_View_Account"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+        <action
+            android:id="@+id/action_Fragment_Account_to_Fragment_Bottom_Dialog_Filter_Account"
+            app:destination="@id/Fragment_Bottom_Dialog_Filter_Account" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Fragment_Card"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.main.card.CardFragment"
+        android:label="@string/locky_section_main_card"
+        tools:layout="@layout/fragment_card">
+        <action
+            android:id="@+id/action_Fragment_Card_to_Fragment_View_Card"
+            app:destination="@id/Fragment_View_Card"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+        <action
+            android:id="@+id/action_Fragment_Card_to_Fragment_Bottom_Dialog_Filter_Card"
+            app:destination="@id/Fragment_Bottom_Dialog_Filter_Card" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Fragment_Bank_Account"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.main.bank_account.BankAccountFragment"
+        android:label="@string/locky_section_main_bank_account"
+        tools:layout="@layout/fragment_bank_account">
+        <action
+            android:id="@+id/action_Fragment_Bank_Account_to_Fragment_View_BankAccount"
+            app:destination="@id/Fragment_View_BankAccount"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+        <action
+            android:id="@+id/action_Fragment_Bank_Account_to_Fragment_Bottom_Dialog_Filter_BankAccount"
+            app:destination="@id/Fragment_Bottom_Dialog_Filter_BankAccount" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Fragment_Device"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.main.device.DeviceFragment"
+        android:label="@string/locky_section_main_device"
+        tools:layout="@layout/fragment_device">
+        <action
+            android:id="@+id/action_Fragment_Device_to_Fragment_Bottom_Dialog_Filter_Device"
+            app:destination="@id/Fragment_Bottom_Dialog_Filter_Device" />
+        <action
+            android:id="@+id/action_Fragment_Device_to_Fragment_View_Device"
+            app:destination="@id/Fragment_View_Device"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+    </fragment>
+
+
+    <!-- =========================== -->
+    <!-- ====== Sub Fragments ====== -->
+    <!-- =========================== -->
+    <fragment
+        android:id="@+id/Fragment_Password_Generator"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.main.password_generator.PasswordGeneratorFragment"
+        android:label=""
+        tools:layout="@layout/fragment_password_generator" />
+
+    <fragment
+        android:id="@+id/Fragment_Profile"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.main.profile.ProfileFragment"
+        android:label="@string/menu_drawer_main_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_Fragment_Profile_to_Fragment_Starter"
+            app:destination="@id/Fragment_Starter"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Fragment_Settings"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.main.settings.SettingsFragment"
+        android:label="@string/menu_drawer_main_settings" />
+
+    <fragment
+        android:id="@+id/Fragment_About"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.main.about.AboutFragment"
+        android:label="@string/menu_drawer_main_about"
+        tools:layout="@layout/fragment_about">
+        <action
+            android:id="@+id/action_Fragment_About_to_Fragment_Donate"
+            app:destination="@id/Fragment_Donate" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Fragment_Donate"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.main.about.donate.DonateFragment"
+        android:label="@string/text_title_screen_donation"
+        tools:layout="@layout/fragment_donate" />
+
+
+    <!-- ================================== -->
+    <!-- ====== Locky View Fragments ====== -->
+    <!-- ================================== -->
+    <fragment
+        android:id="@+id/Fragment_View_Account"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.view.account.ViewAccountFragment"
+        android:label=""
+        tools:layout="@layout/fragment_view_account">
+        <argument
+            android:name="ACCOUNT_toVIEW"
+            app:argType="com.th3pl4gu3.locky_offline.core.credentials.Account" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Fragment_View_Card"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.view.card.ViewCardFragment"
+        android:label=""
+        tools:layout="@layout/fragment_view_card">
+        <argument
+            android:name="CARD_toVIEW"
+            app:argType="com.th3pl4gu3.locky_offline.core.credentials.Card" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Fragment_View_BankAccount"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.view.bank_account.ViewBankAccountFragment"
+        android:label=""
+        tools:layout="@layout/fragment_view_bank_account">
+        <argument
+            android:name="BANKACCOUNT_toVIEW"
+            app:argType="com.th3pl4gu3.locky_offline.core.credentials.BankAccount" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/Fragment_View_Device"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.view.device.ViewDeviceFragment"
+        android:label=""
+        tools:layout="@layout/fragment_view_device">
+        <argument
+            android:name="DEVICE_toVIEW"
+            app:argType="com.th3pl4gu3.locky_offline.core.credentials.Device" />
+    </fragment>
+
+    <!-- ================================= -->
+    <!-- ====== Locky Add Fragments ====== -->
+    <!-- ================================= -->
+    <fragment
+        android:id="@+id/Fragment_Add_Account"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.add.account.AddAccountFragment"
+        android:label=""
+        tools:layout="@layout/fragment_add_account">
+        <argument
+            android:name="KEY_ACCOUNT"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <argument
+            android:name="KEY_ACCOUNT_PREVIOUS"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_Fragment_Add_Account_to_Fragment_Account"
+            app:destination="@id/Fragment_Account"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right"
+            app:popUpTo="@id/Fragment_Account"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_Fragment_Add_Account_to_Fragment_Bottom_Dialog_Logo_Account"
+            app:destination="@id/Fragment_Bottom_Dialog_Logo_Account" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Fragment_Add_Card"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.add.card.AddCardFragment"
+        android:label=""
+        tools:layout="@layout/fragment_add_card">
+        <argument
+            android:name="KEY_CARD"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <argument
+            android:name="KEY_CARD_PREVIOUS"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_Fragment_Add_Card_to_Fragment_Card"
+            app:destination="@id/Fragment_Card"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right"
+            app:popUpTo="@id/Fragment_Account"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Fragment_Add_BankAccount"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.add.bank_account.AddBankAccountFragment"
+        android:label=""
+        tools:layout="@layout/fragment_add_bank_account">
+        <action
+            android:id="@+id/action_Fragment_Add_BankAccount_to_Fragment_Bank_Account"
+            app:destination="@id/Fragment_Bank_Account"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right"
+            app:popUpTo="@id/Fragment_Account"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="KEY_BANKACCOUNT"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <argument
+            android:name="KEY_BANKACCOUNT_PREVIOUS"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_Fragment_Add_BankAccount_to_Fragment_Bottom_Dialog_Logo_Bank_Account"
+            app:destination="@id/Fragment_Bottom_Dialog_Logo_Bank_Account" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Fragment_Add_Device"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.add.device.AddDeviceFragment"
+        android:label=""
+        tools:layout="@layout/fragment_add_device">
+        <action
+            android:id="@+id/action_Fragment_Add_Device_to_Fragment_Device"
+            app:destination="@id/Fragment_Device"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right"
+            app:popUpTo="@id/Fragment_Account"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="KEY_DEVICE"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <argument
+            android:name="KEY_DEVICE_PREVIOUS"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_Fragment_Add_Device_to_Fragment_Bottom_Dialog_Logo_Device"
+            app:destination="@id/Fragment_Bottom_Dialog_Logo_Device" />
+    </fragment>
+
+
+    <!-- ===================================== -->
+    <!-- ====== Bottom Dialog Fragments ====== -->
+    <!-- ===================================== -->
+    <dialog
+        android:id="@+id/Fragment_Bottom_Dialog_Filter_Account"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.main.account.TuningAccountBottomSheetFragment"
+        android:label=""
+        tools:layout="@layout/fragment_bottom_sheet_account_tuning" />
+
+    <dialog
+        android:id="@+id/Fragment_Bottom_Dialog_Filter_Card"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.main.card.TuningCardBottomSheetFragment"
+        android:label=""
+        tools:layout="@layout/fragment_bottom_sheet_card_tuning" />
+
+    <dialog
+        android:id="@+id/Fragment_Bottom_Dialog_Filter_BankAccount"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.main.bank_account.TuningBankAccountBottomSheetFragment"
+        android:label=""
+        tools:layout="@layout/fragment_bottom_sheet_bank_account_tuning" />
+
+    <dialog
+        android:id="@+id/Fragment_Bottom_Dialog_Logo_Account"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.add.account.LogoBottomSheetFragment"
+        android:label=""
+        tools:layout="@layout/fragment_bottom_sheet_account_logo" />
+
+    <dialog
+        android:id="@+id/Fragment_Bottom_Dialog_Logo_Bank_Account"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.add.bank_account.LogoAccentBottomSheetFragment"
+        android:label=""
+        tools:layout="@layout/fragment_bottom_sheet_bank_account_logo">
+        <argument
+            android:name="HEX_CURRENT"
+            android:defaultValue="#D35C4B6C"
+            app:argType="string" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/Fragment_Bottom_Dialog_Filter_Device"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.main.device.TuningDeviceBottomSheetFragment"
+        android:label=""
+        tools:layout="@layout/fragment_bottom_sheet_device_tuning" />
+
+    <dialog
+        android:id="@+id/Fragment_Bottom_Dialog_Logo_Device"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.add.device.LogoCustomizationBottomSheetFragment"
+        android:label=""
+        tools:layout="@layout/fragment_bottom_sheet_device_logo">
+        <argument
+            android:name="HEX_CURRENT"
+            android:defaultValue="#D35C4B6C"
+            app:argType="string" />
+        <argument
+            android:name="ICON_CURRENT"
+            app:argType="string" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/Fragment_Bottom_Dialog_Password_Auth"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.starter.PasswordAuthenticationBottomSheetFragment"
+        android:label=""
+        tools:layout="@layout/fragment_bottom_sheet_authentication_password">
+        <argument
+            android:name="VALUE_SAVEDPASSWORD"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_Fragment_Bottom_Dialog_Password_Auth_to_Fragment_Account"
+            app:destination="@id/Fragment_Account"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right"
+            app:popUpTo="@id/navigation_drawer_main"
+            app:popUpToInclusive="true" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/Fragment_Bottom_Dialog_More_Options"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.main.MoreOptionsBottomSheetFragment"
+        android:label=""
+        tools:layout="@layout/custom_view_bottom_sheet_moreoptions">
+        <argument
+            android:name="VALUE_ACCOUNT"
+            app:argType="com.th3pl4gu3.locky_offline.core.credentials.Account"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="VALUE_CARD"
+            app:argType="com.th3pl4gu3.locky_offline.core.credentials.Card"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="VALUE_BANK_ACCOUNT"
+            app:argType="com.th3pl4gu3.locky_offline.core.credentials.BankAccount"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="VALUE_DEVICE"
+            app:argType="com.th3pl4gu3.locky_offline.core.credentials.Device"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </dialog>
+
+    <!-- ============================== -->
+    <!-- ====== Search Fragment  ====== -->
+    <!-- ============================== -->
+    <fragment
+        android:id="@+id/Fragment_Search"
+        android:name="com.th3pl4gu3.locky_offline.ui.main.main.search.SearchFragment"
+        android:label=""
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_Fragment_Search_to_Fragment_View_BankAccount"
+            app:destination="@id/Fragment_View_BankAccount"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+        <action
+            android:id="@+id/action_Fragment_Search_to_Fragment_View_Card"
+            app:destination="@id/Fragment_View_Card"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+        <action
+            android:id="@+id/action_Fragment_Search_to_Fragment_View_Account"
+            app:destination="@id/Fragment_View_Account"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+        <action
+            android:id="@+id/action_Fragment_Search_to_Fragment_View_Device"
+            app:destination="@id/Fragment_View_Device"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+    </fragment>
+</navigation>

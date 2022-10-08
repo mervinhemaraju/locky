@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- ========================= -->
+    <!-- Material Shape Components -->
+    <!-- ========================= -->
+    <style name="Locky.ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">4dp</item>
+    </style>
+
+    <style name="Locky.ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">6dp</item>
+    </style>
+
+    <style name="Locky.ShapeAppearance.App.MediumComponent.Rounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="Locky.ShapeAppearance.BottomSheet" parent="@style/Locky.ShapeAppearance.App.MediumComponent.Rounded">
+        <item name="cornerSize">0dp</item>
+        <item name="cornerSizeTopRight">10dp</item>
+        <item name="cornerSizeTopLeft">10dp</item>
+    </style>
+
+    <style name="Locky.ShapeAppearance.List.Selected" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomRight">50dp</item>
+        <item name="cornerSizeTopRight">50dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+    </style>
+</resources>

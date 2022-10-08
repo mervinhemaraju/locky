@@ -1,0 +1,428 @@
+<resources>
+
+    <!-- ==================== -->
+    <!-- Application Specific  -->
+    <!-- ==================== -->
+    <!-- Locky Description -->
+    <string name="app_name">Locky</string>
+    <string name="app_description_short">Manage all your sensible data &amp; credential details on a single secure place.</string>
+    <string name="app_developer_signature">Developed with \u2764\uFE0F in 🇲🇺</string>
+
+    <!-- Google Play Details -->
+    <string name="app_play_link" translatable="false">https://play.google.com/store/apps/details?id="%1$s"</string>
+    <string name="app_play_package" translatable="false">com.android.vending</string>
+    <string name="app_play_share">Hey, check out this nice password manager on: https://play.google.com/store/apps/details?id=%1$s</string>
+
+    <!-- Locky Contributors -->
+    <string name="app_contributor_lead_name" translatable="false">Mervin Hemaraju</string>
+    <string name="app_contributor_lead_description">Lead Developer &amp; Designer</string>
+    <string name="app_contributor_lead_url" translatable="false">https://www.linkedin.com/in/mervinh16/</string>
+
+    <string name="app_contributor_graphic_name" translatable="false">Nick Foo Kune</string>
+    <string name="app_contributor_graphic_description">Play Store Banner &amp; Images</string>
+    <string name="app_contributor_graphic_url" translatable="false">https://www.linkedin.com/in/nick-foo-kune-175172128/</string>
+
+    <string name="app_contributor_qa_name" translatable="false">Kirtee Joymungul</string>
+    <string name="app_contributor_qa_description">Quality Assurance Tester</string>
+    <string name="app_contributor_qa_url" translatable="false">https://www.linkedin.com/in/kirtee-joymungul-410156126/</string>
+
+    <!-- Locky Support -->
+    <string name="app_support_email_team" translatable="false">locky.application@gmail.com</string>
+    <string name="app_support_email_subject_feedback" translatable="false">Support :: Locky :: Feedback</string>
+    <string name="app_support_email_subject_bug" translatable="false">Support :: Locky :: Bug Report</string>
+
+    <!-- Locky User details -->
+    <string name="app_user_member_since">Member since "%1$s"</string>
+    <string name="app_user_login">Login: "%1$s"</string>
+
+    <!-- Locky API used and privacy policy -->
+    <string name="app_url_privacy_policy" translatable="false">https://th3pl4gu3.wixsite.com/locky/terms-privacy-policy</string>
+    <string name="app_url_developer_api" translatable="false">https://th3pl4gu3.wixsite.com/locky/developper</string>
+
+    <!-- ==================== -->
+    <!-- Locky Specific Texts  -->
+    <!-- ==================== -->
+    <string name="locky_section_main_account">Accounts</string>
+    <string name="locky_section_main_card">Cards</string>
+    <string name="locky_section_main_bank_account">Bank Accounts</string>
+    <string name="locky_section_main_device">Devices</string>
+
+    <!-- ==================== -->
+    <!-- Titles & Subtitles  -->
+    <!-- ==================== -->
+    <!-- Screen Titles & Subtitles -->
+    <string name="text_title_screen_donation">Donate</string>
+
+    <string name="text_title_screen_splash">Welcome to Locky</string>
+    <string name="text_subtitle_screen_splash">@string/app_description_short</string>
+
+    <string name="text_title_sort">Sort</string>
+    <string name="text_title_emptyView_logo_search">Search it. Love it. Keep it.</string>
+    <string name="text_subtitle_emptyView_logo_search">Search a logo for your account</string>
+
+    <string name="text_title_emptyView_item_search">Find your items!</string>
+    <string name="text_subtitle_emptyView_item_search">Search for all your items here</string>
+
+    <string name="text_title_emptyView_cards">Save your Card. Ease your Mind</string>
+    <string name="text_subtitle_emptyView_cards">Save all your card details here.</string>
+
+    <string name="text_title_emptyView_accounts">An Account a day, keeps Hackers away!</string>
+    <string name="text_subtitle_emptyView_accounts">Save all your account details here.</string>
+
+    <string name="text_title_emptyView_bank_accounts">Save your Bank Accounts</string>
+    <string name="text_subtitle_emptyView_bank_accounts">Don\'t forget to save all your bank accounts.</string>
+
+    <string name="text_title_emptyView_devices">Save your Devices</string>
+    <string name="text_subtitle_emptyView_devices">Start inserting password for all your personal devices here</string>
+
+    <string name="text_title_alert_delete">Delete "%1$s"</string>
+    <string name="text_title_alert_delete_message">Are you sure you want to delete \'"%1$s"\'</string>
+
+    <string name="text_title_alert_biometric">No biometric enrolments</string>
+    <string name="text_title_alert_biometric_message">"You currently don't have any biometric entries. Do you want to add a biometric entry?     "</string>
+
+    <string name="text_title_alert_backup">Backup Locky</string>
+    <string name="text_title_alert_backup_message">Locky performs backup automatically on its users\' app data and settings preferences. If you don\'t have backup option enabled on your phone, please turn it on so that your app data and settings can be automatically backup on your Google Drive.</string>
+
+    <string name="text_title_alert_data_wipe">Delete all data</string>
+    <string name="text_message_alert_data_wipe">Are you sure you want to delete all your data ? (This includes all accounts, cards, devices and bank accounts inserted)</string>
+
+    <string name="text_title_alert_biometric_enrolments_message">You no longer have biometric enrolments configured which was available upon activating the biometric authentication in Locky. Please re-configure your biometrics to be able to access Locky.</string>
+
+    <string name="text_title_alert_biometric_authentication">Unlock to proceed</string>
+    <string name="text_title_alert_biometric_authentication_message">Please authenticate yourself with your biometric credentials to access Locky</string>
+
+    <string name="text_title_alert_intent_none">Unable to open "%1$s" app</string>
+    <string name="text_message_alert_intent_none">There are no application installed to process this request. Please consider installing %1$s application to continue</string>
+
+    <string name="text_title_alert_showPassword">Your password is</string>
+    <string name="text_title_alert_showPin">Your pin is</string>
+
+    <string name="text_subtitle_about_sections_app">About Locky</string>
+    <string name="text_subtitle_about_sections_dev">Support &amp; Development</string>
+    <string name="text_subtitle_about_sections_other">Other</string>
+
+    <string name="text_title_about_dev_rate">Rate Locky</string>
+    <string name="text_title_about_dev_donate">Donate</string>
+    <string name="text_title_about_dev_bug">Report a Bug</string>
+    <string name="text_title_about_dev_share">Share Locky</string>
+
+    <string name="text_description_about_dev_rate">"If you love the app, let us know in the Google Play Store and we can make it even better"</string>
+    <string name="text_description_about_dev_donate">If you think i deserve to get paid for my work, you can leave some money here</string>
+    <string name="text_description_about_dev_bug">Any error that is persisting in the app, please send an email by clicking here</string>
+    <string name="text_description_about_dev_share">Do not forget to share the app with your friends and family</string>
+
+    <string name="text_title_about_other_license">Open Source Licenses</string>
+    <string name="text_title_about_other_terms">Terms &amp; Privacy Policy</string>
+    <string name="text_title_about_other_version">Version</string>
+    <string name="text_title_about_other_developer">Developer API</string>
+
+    <string name="text_description_about_other_developer">Application Program Interface (API) used in Locky</string>
+
+    <string name="text_subtitle_about_buymea">Buy me a:</string>
+
+    <string name="text_title_bank_account_logo_accent_screen">Choose a color</string>
+    <string name="text_title_bank_account_logo_accent_current">Current</string>
+
+    <string name="text_title_device_logo_customize_screen">Customize Logo</string>
+    <string name="text_title_device_logo_customize_current">Current</string>
+    <string name="text_title_device_logo_customize_icon">Choose an Icon</string>
+    <string name="text_title_device_logo_customize_accent">Choose an Accent</string>
+
+    <string name="text_title_master_password">Enter password to proceed</string>
+    <string name="text_subtitle_master_password">Please authenticate yourself with your master password to access Locky</string>
+
+    <string name="text_title_settings_master_password">Master Password</string>
+
+    <string name="text_subtitle_screen_password_gen">Generate a password by choosing the criteria you want to include</string>
+
+    <!-- ==================== -->
+    <!-- ======= Menu =======  -->
+    <!-- ==================== -->
+    <!-- Drawer Menu Items-->
+    <string name="menu_drawer_subtitle_others">OTHERS</string>
+    <string name="menu_drawer_subtitle_user">USER</string>
+    <string name="menu_drawer_subtitle_tools">TOOLS</string>
+    <string name="menu_drawer_main_account">@string/locky_section_main_account</string>
+    <string name="menu_drawer_main_card">@string/locky_section_main_card</string>
+    <string name="menu_drawer_main_device">@string/locky_section_main_device</string>
+    <string name="menu_drawer_main_bank_account">@string/locky_section_main_bank_account</string>
+    <string name="menu_drawer_main_password_generator">Password Generator</string>
+    <string name="menu_drawer_main_profile">Profile</string>
+    <string name="menu_drawer_main_settings">Settings</string>
+    <string name="menu_drawer_main_about">About</string>
+
+    <!-- Menu Actions-->
+    <string name="menu_credentials_actions_duplicate">Duplicate</string>
+    <string name="menu_credentials_actions_edit">Edit</string>
+    <string name="menu_credentials_actions_delete">Delete</string>
+
+    <!-- Menu on Toolbar-->
+    <string name="menu_toolbar_filter">Filter</string>
+
+    <!-- Menu for More Options -->
+    <string name="menu_moreOptions_copyUsername">Copy Username</string>
+    <string name="menu_moreOptions_copyEmail">Copy Email</string>
+    <string name="menu_moreOptions_copyPassword">Copy Password</string>
+    <string name="menu_moreOptions_copyNumber">Copy Number</string>
+    <string name="menu_moreOptions_copyPin">Copy Pin</string>
+    <string name="menu_moreOptions_copyIban">Copy Iban</string>
+    <string name="menu_moreOptions_copySwift">Copy Swift</string>
+    <string name="menu_moreOptions_copyBank">Copy Bank</string>
+    <string name="menu_device_moreOptions_copyIp">Copy IP</string>
+    <string name="menu_moreOptions_visitWebsite">Visit Website</string>
+    <string name="menu_moreOptions_sharePass">Share Password</string>
+    <string name="menu_moreOptions_delete">Delete</string>
+
+    <!-- Menu for search filters-->
+    <string name="menu_search_filters_account">@string/locky_section_main_account</string>
+    <string name="menu_search_filters_card">@string/locky_section_main_card</string>
+    <string name="menu_search_filters_bank_account">@string/locky_section_main_bank_account</string>
+    <string name="menu_search_filters_device">@string/locky_section_main_device</string>
+
+    <!-- =========== -->
+    <!-- Data Fields -->
+    <!-- =========== -->
+    <string name="label_required">*Required Field</string>
+    <string name="label_optional">Optional Field</string>
+    <string name="label_others">Extra Fields</string>
+
+    <string name="field_account_name">* Entry Name</string>
+    <string name="field_account_username">Username</string>
+    <string name="field_account_email">Email</string>
+    <string name="field_account_password">* Password</string>
+    <string name="field_account_password_wr">Password</string>
+    <string name="field_account_website">Website</string>
+    <string name="field_account_authentication_type">Authentication Type</string>
+    <string name="field_account_2fakeys">Two-Factor Backup Codes</string>
+    <string name="field_account_additional">Additional Comments</string>
+
+    <string name="field_card_name">Entry Name</string>
+    <string name="field_card_number">Number</string>
+    <string name="field_card_holder">Name on Card</string>
+    <string name="field_card_bank">Bank</string>
+    <string name="field_card_pin">PIN</string>
+    <string name="field_card_cvc" translatable="false">CVC</string>
+    <string name="field_card_date_issued">Date Issued</string>
+    <string name="field_card_date_expiry">Expiry Date</string>
+    <string name="field_card_additional">Additional Comments</string>
+
+    <string name="field_device_name">Entry Name</string>
+    <string name="field_device_username">Username / SSID / Login</string>
+    <string name="field_device_password">Password / Pin / Security Code</string>
+    <string name="field_device_ip">Ip Address</string>
+    <string name="field_device_mac">MAC Address</string>
+    <string name="field_device_additional">Additional Comments</string>
+
+    <string name="field_bank_account_name">Entry Name</string>
+    <string name="field_bank_account_number">Number</string>
+    <string name="field_bank_account_owner">Bank Account Owner</string>
+    <string name="field_bank_account_bank">Bank</string>
+    <string name="field_bank_account_iban">Iban</string>
+    <string name="field_bank_account_swift">Swift Code</string>
+    <string name="field_bank_account_additional">Additional Comments</string>
+
+    <string name="field_password_old">Old Password</string>
+    <string name="field_password_new">New Password</string>
+    <string name="field_password_confirm">Confirm Password</string>
+    <string name="field_password_master">Master Password</string>
+
+    <string name="field_account_blank_website"><i>No websites entered</i></string>
+    <string name="field_account_blank_login"><i>No login entered</i></string>
+    <string name="field_device_blank_ip"><i>No ip address entered</i></string>
+
+    <string name="field_placeholder_empty">none</string>
+    <string name="field_placeholder_na">n/a</string>
+    <string name="field_placeholder_hidden" translatable="false">******</string>
+
+    <string name="field_helper_account_authentication_type" translatable="false">i.e Google, Facebook, etc…</string>
+    <string name="field_helper_account_2fakeys">Store your Two Factor Authentication backup codes here</string>
+
+    <string name="field_account_sort_name">Entry Name</string>
+    <string name="field_account_sort_username">@string/field_account_username</string>
+    <string name="field_account_sort_email">@string/field_account_email</string>
+    <string name="field_account_sort_website">@string/field_account_website</string>
+    <string name="field_account_sort_authentication_type">@string/field_account_authentication_type</string>
+
+    <string name="field_card_sort_name">@string/field_card_name</string>
+    <string name="field_card_sort_bank">@string/field_card_bank</string>
+    <string name="field_card_sort_cardholder">@string/field_card_holder</string>
+    <string name="field_card_sort_type">Card Brand</string>
+
+    <string name="field_bank_account_sort_entry">@string/field_bank_account_name</string>
+    <string name="field_bank_account_sort_owner">@string/field_bank_account_owner</string>
+    <string name="field_bank_account_sort_bank">@string/field_bank_account_bank</string>
+
+    <string name="field_device_sort_entry">@string/field_device_name</string>
+    <string name="field_device_sort_username">@string/field_device_username</string>
+    <string name="field_device_sort_ip">@string/field_device_ip</string>
+
+    <string name="field_hint_logo_search" translatable="false">i.e facebook.com</string>
+    <string name="field_hint_item_search">Search</string>
+
+    <string name="field_hint_password_generator">Your password will generate here</string>
+
+    <!-- =============== -->
+    <!-- Notify Messages -->
+    <!-- =============== -->
+    <string name="message_internet_connection_unavailable">Please check your internet connection</string>
+    <string name="message_copy_successful">Copied successfully</string>
+    <string name="message_credentials_created">%1$s has been added successfully</string>
+    <string name="message_credentials_modified">%1$s has been modified successfully</string>
+    <string name="message_credentials_deleted">%1$s has been deleted</string>
+    <string name="message_credentials_password_share">Hello, the password for device "%1$s" is "%2$s"</string>
+    <string name="message_user_signin_cancelled">Sign-in has been cancelled</string>
+    <string name="message_loading_logo">Loading your logos…</string>
+    <string name="message_loading_logo_none">No logos found</string>
+    <string name="message_user_account_status_signed_out">You\'ve been signed out</string>
+    <string name="message_settings_biometric_enabled">Biometric authentication has been enabled</string>
+
+    <string name="message_about_donations_cancelled">Purchase cancelled.</string>
+    <string name="message_about_donations_item_owned">You\'ve already donated this item</string>
+    <string name="message_about_donations_unavailable">This item is unavailable</string>
+    <string name="message_about_donations_billing_unavailable">Billing is unavailable. Please try again</string>
+    <string name="message_about_donations_billing_pending">Payment pending</string>
+    <string name="message_about_donations_billing_declined">Payment declined.</string>
+    <string name="message_about_donations_billing_disconnected">Billing service has been disconnected</string>
+    <string name="message_about_donations_billing_completed">Thank you for contributing</string>
+
+    <string name="message_card_warning_willExpire">This card will expire within 30 days</string>
+    <string name="message_card_error_expired">This card has already expired</string>
+
+    <string name="message_settings_wipe_started">Started data clearing…</string>
+    <string name="message_settings_wipe_completed">Data cleared</string>
+    <string name="message_settings_wipe_error">An error occurred while clearing your data</string>
+
+    <plurals name="message_search_results">
+        <item quantity="one">Search returned %d result</item>
+        <item quantity="other">Search returned %d results</item>
+    </plurals>
+
+    <string name="message_settings_masterpassword_enable">Master password has been enabled</string>
+    <string name="message_settings_masterpassword_changed">Master password has been changed</string>
+
+    <string name="message_biometrics_use_masterpassword">Switching to master password</string>
+
+    <string name="message_passwordgenerator_configuration_notdone">Please configure password generator before generating</string>
+
+    <!-- =============== -->
+    <!-- Error Messages -->
+    <!-- =============== -->
+    <string name="error_field_validation_blank">This field cannot be empty</string>
+    <string name="error_field_validation_cvc_format">Incorrect cvc entered</string>
+    <string name="error_field_validation_password_notmatch">Passwords do not match</string>
+    <string name="error_field_validation_password_criteria">Password length should be greater than 6</string>
+    <string name="error_field_validation_password_notsame">Your current password is not correct</string>
+    <string name="error_field_validation_email_format">Please enter a valid email</string>
+    <string name="error_field_validation_id_after">Issued date cannot be after than expiry date</string>
+    <string name="error_field_validation_ed_before">Expiry date cannot be before than issued date.</string>
+
+    <string name="error_biometric_authentication_lockout">Too many attempts. Please try again later</string>
+    <string name="error_biometric_authentication_lockout_permanent">Please use strong authentication (PIN/Password) to unlock the app</string>
+    <string name="error_biometric_authentication_cancelled">Authentication cancelled</string>
+
+    <string name="error_about_donations_querying_products">Error while querying the donations</string>
+
+    <string name="error_internal_code_1">An internal error occurred. Error Code 1: %1$s</string>
+    <string name="error_internal_code_2">An internal error occurred. Error Code 2</string>
+    <string name="error_internal_code_3">An internal error occurred. Error Code 3</string>
+    <string name="error_internal_code_4">An internal error occurred. Error Code 4</string>
+
+    <!-- =============== -->
+    <!-- Button Actions -->
+    <!-- =============== -->
+    <!--Regular Buttons-->
+    <string name="button_action_close">Close</string>
+    <string name="button_action_save">Save</string>
+    <string name="button_action_cancel">Cancel</string>
+    <string name="button_action_undo">Undo</string>
+    <string name="button_action_delete">Delete</string>
+    <string name="button_action_logout">Logout</string>
+    <string name="button_action_okay">OK</string>
+    <string name="button_action_confirm">Confirm</string>
+    <string name="button_action_retry">RETRY</string>
+    <string name="button_action_backup_proceed">Open Backup</string>
+    <string name="button_action_backup_cancel">I\'ll do it later</string>
+    <string name="button_action_google_sign_in">Sign in with Google</string>
+    <string name="button_action_get_started">get started</string>
+    <string name="button_action_copy_password">Copy Password</string>
+    <string name="button_action_use_masterpassword">Use Master Password</string>
+
+    <!-- Chips -->
+    <string name="chips_action_lowercase">lowercase</string>
+    <string name="chips_action_capital">capitals</string>
+    <string name="chips_action_number">numbers</string>
+    <string name="chips_action_dash">1 dash</string>
+    <string name="chips_action_special_char_1">1 special character</string>
+
+    <!-- ========= -->
+    <!-- Settings -->
+    <!-- ========= -->
+    <string name="settings_key_category_display" translatable="false">settings_key_category_display</string>
+    <string name="settings_key_category_features" translatable="false">settings_key_category_features</string>
+    <string name="settings_key_category_security" translatable="false">settings_key_category_security</string>
+    <string name="settings_key_category_backup" translatable="false">settings_key_category_backup</string>
+    <string name="settings_key_category_help" translatable="false">settings_key_category_help</string>
+
+    <string name="settings_title_category_display">Display</string>
+    <string name="settings_title_category_features">Features</string>
+    <string name="settings_title_category_security">Security</string>
+    <string name="settings_title_category_backup">Backup</string>
+    <string name="settings_title_category_data">Data</string>
+    <string name="settings_title_category_help">Help</string>
+
+    <string name="settings_key_display_theme" translatable="false">settings_title_display_theme</string>
+    <string name="settings_title_display_theme">App Theme</string>
+    <string name="settings_value_display_default">Follow System</string>
+    <string name="settings_value_display_light">Light</string>
+    <string name="settings_value_display_dark">Dark</string>
+
+    <string name="settings_key_features_card_expiration" translatable="false">settings_key_features_card_expiration</string>
+    <string name="settings_key_security_thepassword" translatable="false">settings_key_security_thepassword</string>
+    <string name="settings_key_security_password" translatable="false">settings_key_security_password</string>
+    <string name="settings_title_security_password_create">Create Master Password</string>
+    <string name="settings_summary_security_password_create">Setup a master password which will be prompted every time you enter Locky</string>
+    <string name="settings_key_security_password_change" translatable="false">settings_key_security_password_change</string>
+    <string name="settings_title_security_password_change">Change Master Password</string>
+    <string name="settings_summary_security_password_change">Change your master password</string>
+    <string name="settings_title_features_card_expiration">Notify for card expiration</string>
+    <string name="settings_summary_features_card_expiration">Locky will highlight the card when it is about to expire or has already expired</string>
+
+    <string name="settings_key_security_biometric" translatable="false">settings_key_security_fingerprint</string>
+    <string name="settings_title_security_biometric">Biometric Authentication</string>
+    <string name="settings_summary_security_biometric">Authenticate with your biometrics every time you enter Locky</string>
+
+    <string name="settings_key_backup_backup" translatable="false">settings_key_backup_backup</string>
+    <string name="settings_title_backup_backup">Backup</string>
+    <string name="settings_summary_backup_backup">Backup app data for Locky</string>
+
+    <string name="settings_key_help_feedback" translatable="false">settings_key_help_feedback</string>
+    <string name="settings_title_help_feedback">Send feedback</string>
+    <string name="settings_summary_help_feedback">Report technical issues or suggest new features</string>
+
+    <string name="settings_key_data_wipe" translatable="false">settings_key_data_wipe</string>
+    <string name="settings_title_data_wipe">Wipe Data</string>
+    <string name="settings_summary_data_wipe">Delete all your stored credentials</string>
+
+    <string name="settings_key_passwordgen_haslower" translatable="false">settings_key_passwordgen_haslower</string>
+    <string name="settings_key_passwordgen_hasupper" translatable="false">settings_key_passwordgen_hasupper</string>
+    <string name="settings_key_passwordgen_hasnumbers" translatable="false">settings_key_passwordgen_hasnumbers</string>
+    <string name="settings_key_passwordgen_hasdash" translatable="false">settings_key_passwordgen_hasdash</string>
+    <string name="settings_key_passwordgen_hasspecials" translatable="false">settings_key_passwordgen_hasspecials</string>
+
+    <!-- ================= -->
+    <!-- Independent Words -->
+    <!-- ================= -->
+    <string name="word_email">email</string>
+    <string name="word_email_preposition">an email</string>
+
+    <string name="word_browser">browser</string>
+    <string name="word_browser_preposition">a browser</string>
+
+
+    <!-- ==================== -->
+    <!-- ======= DEV =======  -->
+    <!-- ==================== -->
+    <string name="dev_color_hex_accent_bank_logo_default" translatable="false">#D35C4B6C</string>
+
+</resources>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:key="@string/settings_key_category_display"
+        app:title="@string/settings_title_category_display"
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false">
+
+        <ListPreference
+            android:key="@string/settings_key_display_theme"
+            android:title="@string/settings_title_display_theme"
+            android:defaultValue="0"
+            android:entries="@array/list_themes"
+            android:entryValues="@array/list_themes"
+            app:icon="@drawable/ic_theme" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="@string/settings_key_category_features"
+        app:title="@string/settings_title_category_features"
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false">
+
+        <SwitchPreferenceCompat
+            app:key="@string/settings_key_features_card_expiration"
+            app:summary="@string/settings_summary_features_card_expiration"
+            app:title="@string/settings_title_features_card_expiration"
+            app:icon="@drawable/ic_credit_card" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="@string/settings_key_category_security"
+        app:title="@string/settings_title_category_security">
+
+        <SwitchPreferenceCompat
+            app:key="@string/settings_key_security_password"
+            app:summary="@string/settings_summary_security_password_create"
+            app:title="@string/settings_title_security_password_create"
+            app:icon="@drawable/ic_account" />
+
+        <Preference
+            app:key="@string/settings_key_security_password_change"
+            app:summary="@string/settings_summary_security_password_change"
+            app:title="@string/settings_title_security_password_change"
+            android:enabled="false" />
+
+        <SwitchPreferenceCompat
+            app:key="@string/settings_key_security_biometric"
+            app:title="@string/settings_title_security_biometric"
+            android:summary="@string/settings_summary_security_biometric"
+            app:icon="@drawable/ic_fingerprint" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="@string/settings_key_category_backup"
+        app:title="@string/settings_title_category_backup">
+
+        <Preference
+            app:key="@string/settings_key_backup_backup"
+            app:summary="@string/settings_summary_backup_backup"
+            app:title="@string/settings_title_backup_backup"
+            app:icon="@drawable/ic_backup" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/settings_title_category_data">
+
+        <Preference
+            android:key="@string/settings_key_data_wipe"
+            app:summary="@string/settings_summary_data_wipe"
+            app:title="@string/settings_title_data_wipe"
+            app:icon="@drawable/ic_delete" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="@string/settings_key_category_help"
+        app:title="@string/settings_title_category_help">
+
+        <Preference
+            app:key="@string/settings_key_help_feedback"
+            app:summary="@string/settings_summary_help_feedback"
+            app:title="@string/settings_title_help_feedback"
+            app:icon="@drawable/ic_feedback" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
